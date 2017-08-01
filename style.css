@@ -38,6 +38,8 @@ span.company{
 img.suzu {
     display:block;
     margin:auto;
-    border:3px solid red;
+    border: 2px dashed red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
