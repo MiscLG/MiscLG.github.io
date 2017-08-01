@@ -29,8 +29,15 @@ mark{
     background-color:greenyellow
 }
 
-#suzu {
-    display: inline-block;
-    
+span{
+    color:royalblue;
+}
+span.company{
+    color: black;
+}
+img.suzu {
+    display:block;
+    margin:auto;
+    border:3px solid red;
 }
 
