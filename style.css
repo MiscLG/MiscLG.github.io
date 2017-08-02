@@ -9,7 +9,7 @@ h2, h1{
     background-color: aliceblue;
     text-align: center;
 }
-
+<div>
 h1.title{
     margin-top:0px;
     text-align:left;
@@ -30,6 +30,16 @@ p{
 
 mark{
     background-color:cornflowerblue;
+}
+mark>div{
+    width:100px;
+    length:100px;
+    display:none;
+}
+mark:hover>div{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 span{
@@ -60,6 +70,10 @@ footer {
     font-size:12;
     font-Style:italic;
     font-weight: bold;
+    position:absolute;
+    bottom:0px;
+    right:10px;
+    left:10px;
     
 }
 
@@ -101,5 +115,6 @@ div.red{
     width:75%;
 }
 marquee h2{
-    width:200
+    width:200;
+    
 }
