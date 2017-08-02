@@ -9,10 +9,21 @@ h2, h1{
     background-color: aliceblue;
     text-align: center;
 }
-<div>
+div.title{
+    text-align:center;
+}
+img.suzu {
+    display:block;
+    position:relative;
+    top:20px;
+    width:142px;
+    height:150px;
+    border: 2px dashed indianred;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 h1.title{
-    margin-top:0px;
-    text-align:left;
     color: cornflowerblue;
     width:150px;
     height:50px;    
@@ -43,23 +54,8 @@ mark:hover>div{
 }
 
 span{
-    color:royalblue;
-}
-span.company{
     color: black;
 }
-img.suzu {
-    position:relative;
-    left:2px;;
-    width:140px;
-    height:150px;
-    display:block;
-   
-    border: 2px dashed indianred;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
 div.list li{
     text-align: left;
 }
@@ -70,13 +66,12 @@ footer {
     font-size:12;
     font-Style:italic;
     font-weight: bold;
-    position:absolute;
+    position:static;
     bottom:0px;
     right:10px;
     left:10px;
     
 }
-
 a {
     color:royalblue;
     text-decoration: none;
@@ -84,7 +79,7 @@ a {
 table.list{
     width: 100%;
 }
-td {
+td,li {
     color:indianred;
     text-align:center;
     border:3px solid aliceblue;
@@ -117,4 +112,8 @@ div.red{
 marquee h2{
     width:200;
     
+}
+#map{
+    height:400px;
+    border:10px solid aliceblue;
 }
