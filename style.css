@@ -11,15 +11,13 @@ h2, h1{
 }
 
 h1.title{
+    margin-top:0px;
+    text-align:left;
     color: cornflowerblue;
-    max-width:150
-    align:center;
-    margin:auto;
-    
+    width:150px;
+    height:50px;    
 }
-
-
-p,ul,ol{
+p{
     color:indianred;
     /*text-indent: 20px;*/
     text-align:center;
@@ -41,19 +39,19 @@ span.company{
     color: black;
 }
 img.suzu {
+    position:relative;
+    left:2px;;
+    width:140px;
+    height:150px;
     display:block;
-    margin:auto;
-    border: 2px dashed red;
+   
+    border: 2px dashed indianred;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-div.list{
-    display: inline-block;
-    margin:auto;
-    margin-top:0px;
-    width:49%;
-    height:100px;
+div.list li{
+    text-align: left;
 }
 footer {
     border-top: 2px solid indianred;
@@ -62,4 +60,46 @@ footer {
     font-size:12;
     font-Style:italic;
     font-weight: bold;
+    
+}
+
+a {
+    color:royalblue;
+    text-decoration: none;
+}
+table.list{
+    width: 100%;
+}
+td {
+    color:indianred;
+    text-align:center;
+    border:3px solid aliceblue;
+    padding:5px 
+    width:50%;
+    white-space: nowrap;
+}
+
+table.list{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.blue{
+    margin-left:auto;
+    margin-right:auto;
+    background: cornflowerblue;
+    height:40px;
+    width:50%;
+    
+}
+div.red{
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    background: indianred;
+    height:40px;
+    width:75%;
+}
+marquee h2{
+    width:200
 }
