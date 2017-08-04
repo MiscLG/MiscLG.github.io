@@ -1,25 +1,36 @@
 <html>
-    <head> 
+    <head>
         <title> Luis Garcia's Profile</title>
         <link rel="stylesheet" href="style.css">
-        <script src="hello.js"></script>
-    </head>    
-    <body> 
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+         <script src="hello.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <a href="contact.html">Contact Me</a>
+            <a href="lmu.edu">My School</a>
+        </nav>
         <div class="title">
-            <marquee behavior="alternate" direction="right">
-                <img class="suzu" src="https://pbs.twimg.com/profile_images/447347324176453632/rY_JJHYL.jpeg">
-                <h1 class="title">About Me</h1> 
-            </marquee>
+
+            <img class="suzu" src="https://pbs.twimg.com/profile_images/447347324176453632/rY_JJHYL.jpeg">
+            <h1 class="title">About Me</h1>
+
         </div>
-        
+        <input type="text" id="message"><h3 class="hello">Type your name</h3><br>
+      <span id="result"></span>
         <p> I am a rising Freshman at <a href="http://www.lmu.edu"> Loyola Marymount University</a>. <br>I am currently at LMU's <span class>Google</span> CSSI program</p>
-        
+
+        <button>Surprise me!</button>
+        <audio id="music" controls="controls"><source src="FUNKIST--Keijia no Fuku Kaze [SUNRISE 7].re.mp3" type="audio/mpeg" /></audio>
             <table class="list">
                 <thead>
-                    <tr> 
+                    <tr>
                         <td><marquee direction="left"><h2 >My Information</h2></marquee></td>
                         <td ><marquee direction="right"><h2>My Interests</h2></marquee></td>
-                    </tr>            
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -36,7 +47,7 @@
                     </tr>
                 </tbody>
             </table>
-        <h2>Shools I Have Attended</h2>
+        <h2>Schools I Have Attended</h2>
         <ul>
             <li><a href="https://www.bcp.org/">Bellarmine College Prep</a></li>
             <li><a href="https://www.shnativity.org/">Sacred Heart Nativity School</a></li>
@@ -44,7 +55,7 @@
             <li>Galarza Elementary</li>
             <li>Escuela Primaria General Publica Benito Juarez</li>
         </ul>
-        
+
     <div id="map"></div>
     <script>
       var map;
@@ -54,16 +65,18 @@
           zoom: 8
         });
       }
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhAeQT-MdKGiM9U1EBjqn28_lMmEB-shc&callback=initMap"
     async defer></script>
-        
-        <footer> &copy 2017
+
+   
+
+        <footer> &copy; 2017
             <div class="blue"> </div>
             <div class="red"> </div>
         </footer>
-        
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    </body>    
-   
+
+    </body>
+
 </html>
