@@ -42,9 +42,11 @@ function setUpHandlers(){
    // $('button').on('click', houseMusic);
     $('button').on('click',showAudioBar);
     $('#message').on('input', sayHello)
-    $('body').on('mouseenter',bounceTitle())
-
      //$('.title').on('mouseenter',textGrow);
+    window.setInterval(function(){
+        bounceTitle();
+    }, 21000);
+    
 
 }
 
