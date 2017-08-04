@@ -42,8 +42,7 @@ function setUpHandlers(){
    // $('button').on('click', houseMusic);
     $('button').on('click',showAudioBar);
     $('#message').on('input', sayHello)
-    $('body').on('mouseenter',bounceTitle);
-
+c
      //$('.title').on('mouseenter',textGrow);
 
 }
