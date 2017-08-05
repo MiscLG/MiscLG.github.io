@@ -35,6 +35,10 @@ function sayHello(){
 }
 
 function setUpHandlers(){
+    bounceTitle();
+    window.setInterval(function(){
+        bounceTitle();
+    }, 21000);
     $('.suzu').on('click',fadeImage);
     $('.fader').on('click', fadeImage);
     $('#map').on('mouseenter',addBorderToMap);
@@ -43,9 +47,7 @@ function setUpHandlers(){
     $('button').on('click',showAudioBar);
     $('#message').on('input', sayHello)
      //$('.title').on('mouseenter',textGrow);
-    window.setInterval(function(){
-        bounceTitle();
-    }, 21000);
+    
     
 
 }
