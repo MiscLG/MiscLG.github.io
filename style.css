@@ -171,3 +171,9 @@ audio{
     margin-right: auto;
     margin-left:auto;
 }
+#omae{
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    width:50%;
+}
