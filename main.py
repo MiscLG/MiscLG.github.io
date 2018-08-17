@@ -29,9 +29,27 @@ class ContactHandler(webapp2.RequestHandler):
     def get(self):
         contact = jinja.get_template('contact.html')
         self.response.write(contact.render())
-
+        
+class ArtHandler(webapp2.RequestHandler):
+    def get(self):
+        art = jinja.get_template('art.html')
+        self.response.write(art.render())
+        
+class ProgrammingHandler(webapp2.RequestHandler):
+    def get(self):
+        programming = jinja.get_template('programming.html')
+        self.response.write(programming.render())
+        
+class ProfessionalHandler(webapp2.RequestHandler):
+    def get(self):
+        professional = jinja.get_template('professional.html')
+        self.response.write(professional.render())
+        
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/contact',ContactHandler)
+    ('/contact',ContactHandler),
+    ('/art', ArtHandler),
+    ('/programming',ProgrammingHandler),
+    ('/professional', ProfessionalHandler)
 ], debug=True)
