@@ -1,83 +1,53 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> Luis Garcia's Profile</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-         <script src="hello.js"></script>
-    </head>
-
-    <body>
-        <nav>
-            <a href="contact.html">Contact Me</a>
-            <a href="http://www.lmu.edu">My School</a>
-        </nav>
-        <div class="title">
-
-            <img class="suzu" src="https://pbs.twimg.com/profile_images/447347324176453632/rY_JJHYL.jpeg">
-            <h1 class="title">About Me</h1>
-
+<head>
+    <meta charset="utf-8">
+    <title> Luis Garcia's Profile</title>
+    <link rel="stylesheet" href="stylesheets/general/main.css">
+    <link rel="stylesheet" href="stylesheets/pageSpecific/index.css">
+    <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/main.js"></script>
+    
+</head>
+<body>
+    <nav id="siteNav"> 
+        <a href="contact.html" class="siteLinks" id="contact">Contact Me</a>
+        <a href="art.html" class="siteLinks" id="art">I Draw you know...</a>
+        <a href="programming.html" class="siteLinks" id="programming">Programming Projects</a>
+        <a href="professional.html" class="siteLinks" id="professional">Professional Stuff...</a>
+    </nav>
+        <div id="picMusic">
+        <img src="resources/images/Favicon_big.png" id="mainPic" class="messageHover">
+        <span id="tuneMessage" class="hoverMessage">Click to Listen a nice tune...</span>
+        <audio id="tune" controls="controls">
+            <source src="resources/Funkist_KeijiaNoFukuKaze_SUNRISE7.mp3" type="audio/mpeg"/>
+        </audio>
+    </div>
+    <div id="intro">
+        <h1> Hello...</h1>
+        <p> 
+            I'm glad to see you here. Welcome to my website!!! 
+            <br>
+            By all means, take a look.
+        </p>
+        <p> My name is Luis, I'm <span id="age"> </span> years old. </p>
+    </div>
+    <div id="lifeMap">
+    
+        <div id="mapIntro">
+            <h3>Life Map</h3>
+            <p> By looking through the map you will get to know me a little better. </p>
         </div>
-        <input type="text" id="message"><h3 class="hello">Type your name</h3><br>
-      <span id="result"></span>
-        <p> I am a rising Freshman at <a href="http://www.lmu.edu"> Loyola Marymount University</a>. <br>I am currently at LMU's <span class>Google</span> CSSI program</p>
-
-        <button>Surprise me!</button>
-        <audio id="music" controls="controls"><source src="Resources/Funkist_KeijiaNoFukuKaze_SUNRISE7.mp3" type="audio/mpeg" /></audio>
-            <table class="list">
-                <thead>
-                    <tr>
-                        <td><marquee direction="left"><h2 >My Information</h2></marquee></td>
-                        <td ><marquee direction="right"><h2>My Interests</h2></marquee></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Age:18</td>
-                        <td>CompSci</td>
-                    </tr>
-                    <tr>
-                        <td>Country of Birth: Mexico</td>
-                        <td>Anime &amp Manga</td>
-                    </tr>
-                    <tr>
-                        <td>Secret Identity:<mark>(HIMITSU)<div><img src="http://i1.kym-cdn.com/photos/images/facebook/001/150/620/d71.jpg" width=100px, height=100px></div></mark></td>
-                        <td>Drawing</td>
-                    </tr>
-                </tbody>
-            </table>
-        <h2>Schools I Have Attended</h2>
-        <ul>
-            <li><a href="https://www.bcp.org/">Bellarmine College Prep</a></li>
-            <li><a href="https://www.shnativity.org/">Sacred Heart Nativity School</a></li>
-            <li><a href="http://sjusd.org/willow-glen-elementary/">Willow Glen Elementary</a></li>
-            <li>Galarza Elementary</li>
-            <li>Escuela Primaria General Publica Benito Juarez</li>
-        </ul>
-
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 33.9699013, lng: -118.410457099999},
-          zoom: 8
-        });
-      }
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhAeQT-MdKGiM9U1EBjqn28_lMmEB-shc&callback=initMap"
-    async defer></script>
-
-   
-
-        <footer> &copy; 2017
-            <div class="blue"> </div>
-            <div class="red"> </div>
-        </footer>
-
-    </body>
-
+        <div id="map"></div>
+        <script src="javascript/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhAeQT-MdKGiM9U1EBjqn28_lMmEB-shc&callback=initMap"
+        async defer></script>
+    </div>
+    
+    <footer> &copy; 2017
+        <div id="blueRect"> </div>
+        <div id="redRect"> </div>
+    </footer>
+</body>
 </html>
