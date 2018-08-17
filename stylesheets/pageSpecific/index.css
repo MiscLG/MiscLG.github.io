@@ -1,3 +1,6 @@
+#home {
+    display: none;
+}
 #intro {
     display:inline-block;
     position:relative;
