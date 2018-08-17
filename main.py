@@ -18,7 +18,7 @@ import jinja2
 import os
 import webapp2
 
-jinja=jinja2.Environment(loader=jinja2.FileSystemLoader('pagefiles'))
+jinja=jinja2.Environment(loader=jinja2.FileSystemLoader('pageFiles'))
 
 
 class MainHandler(webapp2.RequestHandler):
