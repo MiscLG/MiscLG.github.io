@@ -74,17 +74,21 @@ footer {
     border-top-right-radius: 5pt;
     border-top-left-radius: 5pt;
 }
-#home {
+#home,#login {
     display:block;
     position:fixed;
     color: floralwhite;
     top:0;
-    margin: 2% 0 0 1%;;
+    margin: 2% 0 0 1%;
     padding:1%;
     text-decoration: none;
     border:2pt solid indianred;
     border-radius: 100pt;
     background-color:cornflowerblue;
+}
+#login {
+    position:absolute;
+    right:1%;
 }
 .siteLinks:hover{
     text-decoration:none;
