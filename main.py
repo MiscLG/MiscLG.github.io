@@ -47,6 +47,9 @@ class MainHandler(webapp2.RequestHandler):
             
         else:
             var['login_status'] = ('<a href="%s" id="login">Sign in</a>' % login_url)
+        if user:
+            if users.is_current_user_admin():
+                self.response.write('You are an administrator.')
         self.response.write(page.render(var))
 class ContactHandler(webapp2.RequestHandler):
     def get(self):
@@ -56,7 +59,17 @@ class ContactHandler(webapp2.RequestHandler):
 class ArtHandler(webapp2.RequestHandler):
     def get(self):
         art = jinja.get_template('art.html')
-        self.response.write(art.render())
+        pieces = []
+        portfolio = Drawing.query().fetch()
+        if(len(portfolio)>0):
+            for piece in portfolio: 
+                if not blobstore.get(piece.blob_key):
+                    self.error(404)
+                else:
+                    pieces.append('<img src="/media/{0}" class=portfolio id="{1}"></img>'.format(piece.blob_key,piece.name))
+        else: 
+            pieces.append('<p>No images found.</p>')
+        self.response.write(art.render({'pieces':pieces}))
         
 class ProgrammingHandler(webapp2.RequestHandler):
     def get(self):
@@ -77,6 +90,7 @@ class PhotoUploadFormHandler(webapp2.RequestHandler):
         self.response.out.write("""
 <html><body>
 <form action="{0}" method="POST" enctype="multipart/form-data">
+  Name: <input type="text" width:100px name="title"><br>
   Upload File: <input type="file" name="file"><br>
   <input type="submit" name="submit" value="Submit">
 </form>
@@ -85,16 +99,18 @@ class PhotoUploadFormHandler(webapp2.RequestHandler):
 
 class PhotoUploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     def post(self):
+        name = self.request.get('title')
         upload = self.get_uploads()[0]
-        user_photo = Photo(
-            user=users.get_current_user().user_id(),
-            blob_key=upload.key())
+        user_photo = Drawing(
+            #user=users.get_current_user().user_id(),
+            blob_key=upload.key(),
+            name = name)
         user_photo.put()
 
-        self.redirect('/view_photo/%s' % upload.key())
+        self.redirect('/media/%s' % upload.key())
 
 
-class ViewPhotoHandler(blobstore_handlers.BlobstoreDownloadHandler):
+class MediaHandler(blobstore_handlers.BlobstoreDownloadHandler):
     def get(self, photo_key):
         if not blobstore.get(photo_key):
             self.error(404)
@@ -111,5 +127,5 @@ app = webapp2.WSGIApplication([
     ('/professional', ProfessionalHandler),
     ('/upload_form', PhotoUploadFormHandler),
     ('/upload_photo', PhotoUploadHandler),
-    ('/view_photo/([^/]+)?', ViewPhotoHandler),
+    ('/media/([^/]+)?', MediaHandler),
 ], debug=True)

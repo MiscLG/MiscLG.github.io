@@ -3,3 +3,8 @@
     top:2pt;
     background-color:floralwhite;
 }
+.portfolio {
+    display: inline-block;
+    width:33%;
+    height:auto;
+}
