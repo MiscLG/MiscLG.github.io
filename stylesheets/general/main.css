@@ -74,9 +74,9 @@ footer {
     border-top-right-radius: 5pt;
     border-top-left-radius: 5pt;
 }
-#home,#login {
+#home,#login,#admin {
     display:block;
-    position:fixed;
+    position:absolute;
     color: floralwhite;
     top:0;
     margin: 2% 0 0 1%;

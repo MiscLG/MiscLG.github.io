@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Luis Garcia's Profile</title>
+        <link rel="stylesheet" href="stylesheets/general/main.css">
+        <link rel="stylesheet" href="stylesheets/pageSpecific/admin.css">
+        <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="javascript/main.js"></script>
+        <meta name="google-signin-client_id" content="43515094373-8142sjbo29emrm1d77f6d1jarom8dn3n.apps.googleusercontent.com">
+    </head>
+    <body>
+        {% include "nav.html" %}
+        <form action= {{upload_url}} method="POST" enctype="multipart/form-data">
+        <!--
+            To upload files to the blobstore, the request method must be "POST" and enctype must be set to "multipart/form-data".
+        !-->
+            Name: <input type="text" width:100px name="title"><br>
+            Upload File: <input type="file" name="file"><br>
+            Select the media Type: 
+            <select name="media_type">
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+            </select>
+            <select name="category">
+                <option value="digital-drawing">drawing</option>
+                <option value="animation">Animation</option>
+                <option value="hand-made">Hand-Made</option>
+                <option value="other_media">Other Media</option>
+            </select>
+           
+          <input type="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>

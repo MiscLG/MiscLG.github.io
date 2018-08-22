@@ -24,41 +24,45 @@ from models import *
 
 jinja=jinja2.Environment(loader=jinja2.FileSystemLoader('pageFiles'))
 
+def authUser(template):
+    user = users.get_current_user()
+    logout_url= users.create_logout_url('/')
+    login_url= users.create_login_url('/')
+    var={}
+    if user:
+        email=users.get_current_user().email()
+        try:
+            User.query(User.email==email).fetch()
+        except:
+            user= User(
+                name=users.get_current_user().nickname(),
+                email=users.get_current_user().email()
+                )
+            user.put()     
+        var['login_status'] = ('<a href="%s" id="login">Sign out</a>' % logout_url)
+        if users.is_current_user_admin():
+            template.response.write('<a href="/admin" id="admin">Admin</a>')
+
+    else:
+        var['login_status'] = ('<a href="%s" id="login">Sign in</a>' % login_url)
+    return var;
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         page = jinja.get_template('index.html')
-        user = users.get_current_user()
-        #note to self: figure out how to modularize login authentication... prob function
-        logout_url= users.create_logout_url('/')
-        login_url= users.create_login_url('/')
-        var={}
-        if user:
-            email=users.get_current_user().email()
-            try:
-                User.query(User.email==email).fetch()
-            except:
-                user= User(
-                    name=users.get_current_user().nickname(),
-                    email=users.get_current_user().email()
-                    )
-                user.put()     
-            var['login_status'] = ('<a href="%s" id="login">Sign out</a>' % logout_url)
-            
-        else:
-            var['login_status'] = ('<a href="%s" id="login">Sign in</a>' % login_url)
-        if user:
-            if users.is_current_user_admin():
-                self.response.write('You are an administrator.')
+        var = authUser(self)
+        
         self.response.write(page.render(var))
 class ContactHandler(webapp2.RequestHandler):
     def get(self):
         contact = jinja.get_template('contact.html')
-        self.response.write(contact.render())
+        var = authUser(self)
+        self.response.write(contact.render(var))
         
 class ArtHandler(webapp2.RequestHandler):
     def get(self):
         art = jinja.get_template('art.html')
+        var = authUser(self)
         pieces = []
         portfolio = Drawing.query().fetch()
         if(len(portfolio)>0):
@@ -66,47 +70,59 @@ class ArtHandler(webapp2.RequestHandler):
                 if not blobstore.get(piece.blob_key):
                     self.error(404)
                 else:
-                    pieces.append('<img src="/media/{0}" class=portfolio id="{1}"></img>'.format(piece.blob_key,piece.name))
+                    if piece.media_type == "image":
+                        pieces.append('<img src="/media/{0}" class=portfolio id="{1}"></img>'.format(piece.blob_key,piece.name))
+                    if piece.media_type == "video":
+                        pieces.append("""
+                        <video class="portfolio" id="{1}" controls>
+                            <source src="/media/{0}" type="video/mp4">
+                            <source src="/media/{0}" type="video/ogg">
+                        Your browser does not support the video tag.
+                        </video>""".format(piece.blob_key,piece.name))
         else: 
             pieces.append('<p>No images found.</p>')
-        self.response.write(art.render({'pieces':pieces}))
+        var['pieces']=pieces
+        self.response.write(art.render(var))
         
 class ProgrammingHandler(webapp2.RequestHandler):
     def get(self):
         programming = jinja.get_template('programming.html')
-        self.response.write(programming.render())
+        var = authUser(self)
+        self.response.write(programming.render(var))
         
 class ProfessionalHandler(webapp2.RequestHandler):
     def get(self):
         professional = jinja.get_template('professional.html')
-        self.response.write(professional.render())
+        var = authUser(self)
+        self.response.write(professional.render(var))
 
-class PhotoUploadFormHandler(webapp2.RequestHandler):
+class AdminHandler(webapp2.RequestHandler):
     def get(self):
-        upload_url = blobstore.create_upload_url('/upload_photo')
-        # To upload files to the blobstore, the request method must be "POST"
-        # and enctype must be set to "multipart/form-data".
-        # NOTE TO SELF: figure out how to do this from a modular html form like nav
-        self.response.out.write("""
-<html><body>
-<form action="{0}" method="POST" enctype="multipart/form-data">
-  Name: <input type="text" width:100px name="title"><br>
-  Upload File: <input type="file" name="file"><br>
-  <input type="submit" name="submit" value="Submit">
-</form>
-</body></html>""".format(upload_url))
+        admin = jinja.get_template('admin.html')
+        var = authUser(self)
+        var['upload_url'] = blobstore.create_upload_url('/upload_photo')
+        if users.is_current_user_admin():
+            self.response.write(admin.render(var))
+        else:
+            template.response.write('Not an administrator')
+            self.redirect("/")
 
 
 class PhotoUploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     def post(self):
         name = self.request.get('title')
+        media_type = self.request.get('media_type')
+        category = self.request.get('category')
         upload = self.get_uploads()[0]
         user_photo = Drawing(
-            #user=users.get_current_user().user_id(),
-            blob_key=upload.key(),
-            name = name)
+            blob_key = upload.key(),
+            name = name,
+            media_type = media_type,
+            category = category,
+            likes = 0,
+            comments = 0,
+        )
         user_photo.put()
-
         self.redirect('/media/%s' % upload.key())
 
 
@@ -125,7 +141,7 @@ app = webapp2.WSGIApplication([
     ('/art', ArtHandler),
     ('/programming',ProgrammingHandler),
     ('/professional', ProfessionalHandler),
-    ('/upload_form', PhotoUploadFormHandler),
+    ('/admin', AdminHandler),
     ('/upload_photo', PhotoUploadHandler),
     ('/media/([^/]+)?', MediaHandler),
 ], debug=True)
