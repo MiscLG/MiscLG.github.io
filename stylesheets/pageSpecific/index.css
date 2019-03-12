@@ -1,5 +1,9 @@
-#home {
+#home, #adminHome {
     display: none;
+}
+#admin {
+    margin: 2% 0 0 1%;
+    padding:1%;
 }
 #intro {
     display:inline-block;

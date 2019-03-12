@@ -35,7 +35,7 @@ function updateAge(){
     let ageText = $('#age');
     let birthDate = new Date("7/13/1999").getTime();
     let today = Date.now();
-    let age = Math.round((today - birthDate)/MILLISECONDS_IN_YEAR);
+    let age = Math.floor((today - birthDate)/MILLISECONDS_IN_YEAR);
     ageText.text(age);
 }
 function setUpHandlers(){

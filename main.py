@@ -29,6 +29,7 @@ def authUser(template):
     logout_url= users.create_logout_url('/')
     login_url= users.create_login_url('/')
     var={}
+    var['home'] = ('<a href="/" id="home">Home</a>')#before user verification so it does not depend on login status
     if user:
         email=users.get_current_user().email()
         try:
@@ -41,8 +42,8 @@ def authUser(template):
             user.put()     
         var['login_status'] = ('<a href="%s" id="login">Sign out</a>' % logout_url)
         if users.is_current_user_admin():
-            template.response.write('<a href="/admin" id="admin">Admin</a>')
-
+            var['home']=('<a href="/" id="adminHome">Home</a>')
+            var['admin']=('<a href="/admin" id="admin">Admin</a>')
     else:
         var['login_status'] = ('<a href="%s" id="login">Sign in</a>' % login_url)
     return var;
@@ -70,17 +71,7 @@ class ArtHandler(webapp2.RequestHandler):
                 if not blobstore.get(piece.blob_key):
                     self.error(404)
                 else:
-                    if piece.media_type == "image":
-                        pieces.append('<img src="/media/{0}" class=portfolio id="{1}"></img>'.format(piece.blob_key,piece.name))
-                    if piece.media_type == "video":
-                        pieces.append("""
-                        <video class="portfolio" id="{1}" controls>
-                            <source src="/media/{0}" type="video/mp4">
-                            <source src="/media/{0}" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>""".format(piece.blob_key,piece.name))
-        else: 
-            pieces.append('<p>No images found.</p>')
+                    pieces.append(piece)
         var['pieces']=pieces
         self.response.write(art.render(var))
         

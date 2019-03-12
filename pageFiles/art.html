@@ -8,18 +8,37 @@
     <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     {% include "nav.html" %}
-    
+
     <h1>Will contain my portfolio page</h1>
-    {%for piece in pieces%}
-        {{piece}}
-    {%endfor%}
+    {%if pieces|length >0%}
+        {%for piece in pieces%}
+            <div class="container">
+                {%if piece.media_type == "image"%}
+                    <div class="narrow_piece">
+                    <img src="/media/{{piece.blob_key}}" class=portfolio id="{{piece.name}}">
+                {%elif piece.media_type == "video"%}
+                    <div class="wide_piece">
+                    <video class="portfolio" id="{{piece.name}}" controls>
+                        <source src="/media/{{piece.blob_key}}" type="video/mp4">
+                        <source src="/media/{{piece.blob_key}}" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                {%endif%}
+                </div>
+            </div>
+        {%endfor%}
+        {%else%}
+        <p>No images found.</p>
+    {%endif%}
+
     <footer> &copy; 2017
         <div id="blueRect"> </div>
         <div id="redRect"> </div>
-    </footer>  
+    </footer>
 </body>
 </html>

@@ -9,27 +9,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="javascript/main.js"></script>
         <meta name="google-signin-client_id" content="43515094373-8142sjbo29emrm1d77f6d1jarom8dn3n.apps.googleusercontent.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         {% include "nav.html" %}
+
+        <h1>Add an artwork to portfolio</h1>
         <form action= {{upload_url}} method="POST" enctype="multipart/form-data">
         <!--
             To upload files to the blobstore, the request method must be "POST" and enctype must be set to "multipart/form-data".
         !-->
             Name: <input type="text" width:100px name="title"><br>
             Upload File: <input type="file" name="file"><br>
-            Select the media Type: 
+            Select the media Type:
             <select name="media_type">
                 <option value="image">Image</option>
                 <option value="video">Video</option>
             </select>
+            <br>
+            Select the category:
             <select name="category">
-                <option value="digital-drawing">drawing</option>
+                <option value="digital-drawing">Digital Drawing</option>
                 <option value="animation">Animation</option>
                 <option value="hand-made">Hand-Made</option>
                 <option value="other_media">Other Media</option>
             </select>
-           
+          <br>
           <input type="submit" name="submit" value="Submit">
         </form>
     </body>
