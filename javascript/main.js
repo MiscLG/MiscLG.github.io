@@ -10,18 +10,20 @@ function showAudioBar(){
         audioBar.trigger('pause');
         audioBar.hide();
          map.css({margin:"10% auto"});
-        $('#tuneMessage').text("Click to Listen a nice tune...");
-    } 
+        $('#tuneMessage').text("Click the Picture...");
+    }
 }
 
 function showHoverMessage(){
     message = $('#tuneMessage');
-    
+
     if(message.css('visibility')=="hidden"){
+        message.css({display:"block"});
         message.css({visibility:"visible"});
     }
     else{
-        message.css({visibility:"hidden"});
+      message.css({display:"none"});
+      message.css({visibility:"hidden"});
     }
 }
 
@@ -30,7 +32,7 @@ function updateAge(){
     let SECONDS_IN_MINUTE = 60;
     let MINUTES_IN_HOUR = 60;
     let HOURS_IN_DAY = 24;
-    let DAYS_IN_YEAR = 365; 
+    let DAYS_IN_YEAR = 365;
     let MILLISECONDS_IN_YEAR = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_YEAR;
     let ageText = $('#age');
     let birthDate = new Date("7/13/1999").getTime();

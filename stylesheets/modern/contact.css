@@ -1,0 +1,23 @@
+#contact {
+  display:none;
+}
+#serviceList,#recommendations{
+  text-align:center;
+}
+h1{
+  text-align: center;
+}
+li{
+  background-color:#4162C0/*STRONGBLUE*/;
+  margin:1em;
+  list-style-type: none;
+}
+.service, .rec{
+  text-decoration: none;
+
+  color:  #FFD8C4/*LIGHTORANGE*/;
+}
+.service:hover, .rec:hover{
+  padding:0 4em 0 4em;
+  border-bottom: 3px solid #FFD8C4/*LIGHTORANGE*/;
+}

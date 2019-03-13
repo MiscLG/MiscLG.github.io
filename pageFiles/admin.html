@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title> Luis Garcia's Profile</title>
-        <link rel="stylesheet" href="stylesheets/general/main.css">
-        <link rel="stylesheet" href="stylesheets/pageSpecific/admin.css">
+        <link rel="stylesheet" href="stylesheets/modern/main.css">
+        <link rel="stylesheet" href="stylesheets/modern/admin.css">
         <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="javascript/main.js"></script>
@@ -15,7 +15,7 @@
         {% include "nav.html" %}
 
         <h1>Add an artwork to portfolio</h1>
-        <form action= {{upload_url}} method="POST" enctype="multipart/form-data">
+        <form class="section" action= {{upload_url}} method="POST" enctype="multipart/form-data">
         <!--
             To upload files to the blobstore, the request method must be "POST" and enctype must be set to "multipart/form-data".
         !-->

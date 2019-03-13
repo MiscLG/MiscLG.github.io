@@ -29,9 +29,11 @@ def authUser(template):
     logout_url= users.create_logout_url('/')
     login_url= users.create_login_url('/')
     var={}
-    var['home'] = ('<a href="/" id="home">Home</a>')#before user verification so it does not depend on login status
+    var['home'] = ('<a href="/" id="home" class="button">Home</a>')#before user verification so it does not depend on login status
+    var['user'] = "..."
     if user:
         email=users.get_current_user().email()
+        var['user']= " " + users.get_current_user().nickname();
         try:
             User.query(User.email==email).fetch()
         except:
@@ -39,27 +41,27 @@ def authUser(template):
                 name=users.get_current_user().nickname(),
                 email=users.get_current_user().email()
                 )
-            user.put()     
-        var['login_status'] = ('<a href="%s" id="login">Sign out</a>' % logout_url)
+            user.put()
+        var['login_status'] = ('<a href="%s" id="login" class="button">Sign out</a>' % logout_url)
         if users.is_current_user_admin():
-            var['home']=('<a href="/" id="adminHome">Home</a>')
-            var['admin']=('<a href="/admin" id="admin">Admin</a>')
+            var['home']=('<a href="/" id="adminHome" class="button">Home</a>')
+            var['admin']=('<a href="/admin" id="admin" class="button">Admin</a>')
     else:
-        var['login_status'] = ('<a href="%s" id="login">Sign in</a>' % login_url)
+        var['login_status'] = ('<a href="%s" id="login" class="button">Sign in</a>' % login_url)
     return var;
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         page = jinja.get_template('index.html')
         var = authUser(self)
-        
+
         self.response.write(page.render(var))
 class ContactHandler(webapp2.RequestHandler):
     def get(self):
         contact = jinja.get_template('contact.html')
         var = authUser(self)
         self.response.write(contact.render(var))
-        
+
 class ArtHandler(webapp2.RequestHandler):
     def get(self):
         art = jinja.get_template('art.html')
@@ -67,20 +69,20 @@ class ArtHandler(webapp2.RequestHandler):
         pieces = []
         portfolio = Drawing.query().fetch()
         if(len(portfolio)>0):
-            for piece in portfolio: 
+            for piece in portfolio:
                 if not blobstore.get(piece.blob_key):
                     self.error(404)
                 else:
                     pieces.append(piece)
         var['pieces']=pieces
         self.response.write(art.render(var))
-        
+
 class ProgrammingHandler(webapp2.RequestHandler):
     def get(self):
         programming = jinja.get_template('programming.html')
         var = authUser(self)
         self.response.write(programming.render(var))
-        
+
 class ProfessionalHandler(webapp2.RequestHandler):
     def get(self):
         professional = jinja.get_template('professional.html')

@@ -3,28 +3,33 @@
     <head>
     <meta charset="utf-8">
     <title> Contact Me </title>
-    <link rel="stylesheet" href="stylesheets/general/main.css">
-    <link rel="stylesheet" href="stylesheets/pageSpecific/contact.css">
+    <link rel="stylesheet" href="stylesheets/modern/main.css">
+    <link rel="stylesheet" href="stylesheets/modern/contact.css">
     <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
     <body>
     {% include "nav.html" %}
     <h1>CONTACT ME @</h1>
-    <ul>
-        <li><a href="https://twitter.com/Misc___FC">twitter</a></li>
-        <li><a href="https://github.com/MiscLG">github</a></li>
-        <li><a href="https://www.facebook.com/garcia.luis.718">Facebook</a></li>
-        <li><a href="https://www.instagram.com/garcia_lfc/?hl=en">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/luis-garcia-068927104/">LinkedIn</a></li>
+    <ul id="serviceList" class="section">
+        <li><a class="service" href="https://twitter.com/Misc___FC">Twitter</a></li>
+        <li><a class="service" href="https://github.com/MiscLG">GitHub</a></li>
+        <li><a class="service" href="https://www.facebook.com/garcia.luis.718">Facebook</a></li>
+        <li><a class="service" href="https://www.instagram.com/garcia_lfc/?hl=en">Instagram</a></li>
+        <li><a class="service" href="https://www.linkedin.com/in/luis-garcia-068927104/">LinkedIn</a></li>
     </ul>
-    <footer> &copy; 2017
-        <div id="blueRect"> </div>
-        <div id="redRect"> </div>
-    </footer>
+    <h1>Check These Out...</h1>
+    <ul id="recommendations" class="section">
+        <li><a class="rec" href="https://www.youtube.com/channel/UCXNyvv1dtqgsYjMV9R6e0Lw">Tiago</a></li>
+        <li><a class="rec" href="https://www.youtube.com/channel/UCxEgOKuI-n-WOJaNcisHvSg">Peje</a></li>
+        <li><a class="rec" href="https://www.tofugu.com">Tofugu/WaniKani</a></li>
+        <li><a class="rec" href="https://www.crunchyroll.com/">Crunchyroll</a></li>
+        <li><a class="rec" href="http://www.hssv.org/">Humane Society</a></li>
+    </ul>
+    {% include "foot.html" %}
     </body>
 
 </html>

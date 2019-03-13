@@ -16,7 +16,7 @@ footer {
     font-size:12pt;
     font-style:italic;
     font-weight: bold;
-    
+
     /*background-color:green;*/
     border-top: 3pt solid indianred;
     margin:5% auto 0 auto;
@@ -31,7 +31,7 @@ footer {
     margin: 0 0 2% 0;
     padding: 1% 0 0 0;
     border-bottom:2pt solid cornflowerblue;
-    
+
 }
 
 #blueRect{
@@ -74,6 +74,7 @@ footer {
     border-top-right-radius: 5pt;
     border-top-left-radius: 5pt;
 }
+
 #home,#login,#admin,#adminHome{
     text-align: center;
     display:block;
@@ -106,4 +107,3 @@ footer {
 .siteLinks:hover{
     text-decoration:none;
 }
-
