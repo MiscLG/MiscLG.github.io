@@ -14,7 +14,6 @@ li{
 }
 .service, .rec{
   text-decoration: none;
-
   color:  #FFD8C4/*LIGHTORANGE*/;
 }
 .service:hover, .rec:hover{

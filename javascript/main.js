@@ -27,6 +27,10 @@ function showHoverMessage(){
     }
 }
 
+
+  function fullscreen(){
+    $('.portfolio').toggleClass('fullscreen');
+});
 function updateAge(){
     let MILLIS_IN_SECOND = 1000;
     let SECONDS_IN_MINUTE = 60;
@@ -44,5 +48,7 @@ function setUpHandlers(){
     $('#mainPic').on('click',showAudioBar);
     $('#mainPic').mouseenter(showHoverMessage).mouseleave(showHoverMessage);
     updateAge();
+    $('.portfolio').on('click',fullscreen)
+
 }
 $(document).ready(setUpHandlers);
