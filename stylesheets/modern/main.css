@@ -17,13 +17,14 @@ body{
 
 }
 .siteLinks{
-  font-size:1em;
+  font-size:1.5em;
   font-family: 'Ubuntu Mono', monospace;
   color: #88ADE5/*LIGHTBLUE*/;
   display:inline-block;
   text-align:center;
   width:30%;
-  padding:.5em 0 .5em 0;
+  overflow:hidden;
+  padding:1em 0 1em 0;
     /*background-color:yellow;*/
   text-decoration: none;
 
