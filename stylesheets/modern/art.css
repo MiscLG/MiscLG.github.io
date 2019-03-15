@@ -9,7 +9,6 @@ body {
 }
 .portfolio:hover {
     transform:scale(1.25);
-
 }
 img,video {
   text-align:center;

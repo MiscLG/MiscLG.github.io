@@ -26,11 +26,6 @@ function showHoverMessage(){
       message.css({visibility:"hidden"});
     }
 }
-
-
-  function fullscreen(){
-    $('.portfolio').toggleClass('fullscreen');
-});
 function updateAge(){
     let MILLIS_IN_SECOND = 1000;
     let SECONDS_IN_MINUTE = 60;
