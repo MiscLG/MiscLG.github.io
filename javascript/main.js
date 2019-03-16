@@ -26,6 +26,35 @@ function showHoverMessage(){
       message.css({visibility:"hidden"});
     }
 }
+function hideNav(){
+  let navItems = $('.siteLinks');
+  if(document.getElementById("siteNav").clientWidth <= 500){
+    $('#siteNav').css({border:"none"});
+    $('#mobileMenu').css({display:"inline-block"});
+    for(element in navItems){
+      navItems[element].className = "mobileSiteLinks";
+    }
+  }
+  if(document.getElementById("siteNav").clientWidth >500){
+    // $('#siteNav').css({
+    //   'border-bottom': "5px solid #4162C0/*STRONGBLUE*/"
+    // });
+    $('#mobileMenu').css({display:"none"});
+    navItems = $('.mobileSiteLinks');
+    for(element in navItems){
+      navItems[element].className = "siteLinks";
+    }
+  }
+}
+function showMobileNav(){
+  if($('.mobileSiteLinks').css('display')=="none"){
+    $('.mobileSiteLinks').css({display:"block"});
+  }
+  else{
+    $('.mobileSiteLinks').css({display:"none"});
+  }
+
+}
 function updateAge(){
     let MILLIS_IN_SECOND = 1000;
     let SECONDS_IN_MINUTE = 60;
@@ -43,7 +72,8 @@ function setUpHandlers(){
     $('#mainPic').on('click',showAudioBar);
     $('#mainPic').mouseenter(showHoverMessage).mouseleave(showHoverMessage);
     updateAge();
-    $('.portfolio').on('click',fullscreen)
+    $(window).on('resize',hideNav).on('load',hideNav);
+    $('#mobileMenu').on('click',showMobileNav);
 
 }
 $(document).ready(setUpHandlers);

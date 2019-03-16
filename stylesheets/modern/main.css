@@ -6,17 +6,25 @@ body{
     height: 100%;
     width:100%;
 }
-
+#mobileMenu{
+  display:none;
+  width:24%;
+}
+.mobileBars{
+  display: inline-block;
+  width:4em;
+  height:.5em;
+  background-color: white;
+}
 #siteNav{
-    border-top: 5px solid #4162C0/*STRONGBLUE*/;
     border-bottom: 5px solid #4162C0/*STRONGBLUE*/;
     display:block;
     text-align:center;
     text-decoration: none;
     width:100%;
-
+    margin:0 auto 2em auto;
 }
-.siteLinks{
+.siteLinks, .mobileSiteLinks{
   font-size:1.25em;
   font-family: 'Ubuntu Mono', monospace;
   color: #88ADE5/*LIGHTBLUE*/;
@@ -26,22 +34,33 @@ body{
   padding:.75em 0 .75em 0;
     /*background-color:yellow;*/
   text-decoration: none;
-
 }
 .siteLinks:hover{
   background-color: #FFD8C4/*LIGHTORANGE*/;
   color: #0E40CC;
 }
-#siteButtons{
-  display:block;
+.mobileSiteLinks{
+  display:none;
+  width:100%;
+}
+#utilities{
   text-align:center;
+  border-bottom: 5px solid #4162C0/*STRONGBLUE*/;
+}
+
+#siteButtons{
+  display:inline-block;
+  vertical-align: top;
+  text-align:center;
+  width:70%;
+  margin:0 auto 1em auto;
 }
 .button{
     text-align: center;
     display:inline-block;
     color: #88ADE5/*LIGHTBLUE*/;
-    padding:1em 5% 0 5%;
-    margin:0 0 1em 0;
+    padding:1.5em 5% 0 5%;
+    margin:0 0 0 0;
     text-decoration: none;
 }
 .button:hover{
