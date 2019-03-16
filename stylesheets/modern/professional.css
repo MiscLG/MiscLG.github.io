@@ -1,3 +1,23 @@
 #professional{
   display: none;
 }
+#resumeFile{
+  display:block;
+  width:15em;
+  background-color:#4162C0/*STRONGBLUE*/;
+  color:#88ADE5/*LIGHTBLUE*/;
+  border: 2px solid #88ADE5/*LIGHTBLUE*/;
+  border-radius: 1em;
+  text-decoration: none;
+  text-align: center;
+  padding:.5em;
+  margin:0 auto 0 auto;
+}
+#resumeFile:hover{
+  background-color:#FFD8C4/*LIGHTORANGE*/;
+  border-color: #FFD8C4/*LIGHTORANGE*/;
+  color:#4162C0/*STRONGBLUE*/;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  transform:translateY(-10px);
+
+}
