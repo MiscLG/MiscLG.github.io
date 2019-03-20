@@ -12,11 +12,15 @@ li{
   margin:1em;
   list-style-type: none;
 }
+.hiddenDiv{
+  display:none;
+  background-color:
+}
 .service, .rec{
   text-decoration: none;
   color:  #FFD8C4/*LIGHTORANGE*/;
 }
-.service:hover, .rec:hover{
+.service:hover, .service:active, .rec:hover, .rec:active{
   padding:0 4em 0 4em;
   border-bottom: 3px solid #FFD8C4/*LIGHTORANGE*/;
 }

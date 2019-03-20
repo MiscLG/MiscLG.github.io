@@ -1,7 +1,7 @@
 #professional{
   display: none;
 }
-#resumeFile{
+#button{
   display:block;
   width:15em;
   background-color:#4162C0/*STRONGBLUE*/;
@@ -13,7 +13,7 @@
   padding:.5em;
   margin:0 auto 0 auto;
 }
-#resumeFile:hover{
+#button:hover{
   background-color:#FFD8C4/*LIGHTORANGE*/;
   border-color: #FFD8C4/*LIGHTORANGE*/;
   color:#4162C0/*STRONGBLUE*/;

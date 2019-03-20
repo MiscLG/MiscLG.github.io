@@ -55,6 +55,16 @@ function showMobileNav(){
   }
 
 }
+
+function showHiddenDiv(){
+  let item ='.hiddenDiv#' + $(this).attr("id");
+  if($(item).css('display')=="none"){
+    $(item).css({display:"block"});
+  }
+  else{
+    $(item).css({display:"none"});
+  }
+}
 function updateAge(){
     let MILLIS_IN_SECOND = 1000;
     let SECONDS_IN_MINUTE = 60;
@@ -74,6 +84,7 @@ function setUpHandlers(){
     updateAge();
     $(window).on('resize',hideNav).on('load',hideNav);
     $('#mobileMenu').on('click',showMobileNav);
+    $('.rec').mouseenter(showHiddenDiv).mouseleave(showHiddenDiv);
 
 }
 $(document).ready(setUpHandlers);
