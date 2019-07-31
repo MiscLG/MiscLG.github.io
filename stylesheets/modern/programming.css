@@ -1,0 +1,36 @@
+#programming{
+    display:none;
+}
+#repoLink{
+  
+}
+ul{
+  padding:0;
+  text-align:center;
+}
+h1{
+  text-align: center;
+}
+li{
+  background-color:#4162C0/*STRONGBLUE*/;
+  max-width:800px;
+  text-align: center;
+  margin:1em auto 1em auto;
+  list-style-type: none;
+  padding:.5em 0 0 0;
+}
+.description{
+  max-width:800px;
+  margin:.5em auto 5% auto;
+  padding:1% 5% 1% 5%;
+  background-color:#FFD8C4/*LIGHTORANGE*/;
+  color: #4162C0/*STRONGBLUE*/;
+}
+.project{
+  text-decoration: none;
+  color:  #FFD8C4/*LIGHTORANGE*/;
+}
+.project:hover{
+  padding:0 4em 0 4em;
+  border-bottom: 3px solid #FFD8C4/*LIGHTORANGE*/;
+}
