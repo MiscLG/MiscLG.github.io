@@ -2,22 +2,63 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title> Contact Me </title>
-    <link rel="stylesheet" href="stylesheets/general/main.css">
-    <link rel="stylesheet" href="stylesheets/pageSpecific/programming.css">
+    <title> Programming </title>
+    <link rel="stylesheet" href="stylesheets/modern/main.css">
+    <link rel="stylesheet" href="stylesheets/modern/programming.css">
     <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script></script>
-    
+
 </head>
     <body>
     {% include "nav.html" %}
-    <h1>Will contain links to my largest programming projects</h1>
-          
-    <footer> &copy; 2017
-        <div id="blueRect"> </div>
-        <div id="redRect"> </div>
-    </footer>        
+
+    <a id="button" href="https://github.com/MiscLG">GitHub</a>
+    <ul>
+      <li id="hobyn">
+        <a href="https://hobyn-trbl.appspot.com" class="project" id="item">Hobyn</a>
+        <p class="description" >
+          This Web App was made in a group of three as the final project for the
+          Google CSSI LMU Extension program. This application implements Google's
+          AppEngine, and DataStore. It is built using HTML5, CSS3, JavaScript and
+          Python. My role in the group was to take care of backend programming.
+        </p>
+      </li>
+      <li id="chaser">
+        <a href="https://jennashea.github.io/chaser/" class="project" id="item">Chaser</a>
+        <p class="description" >
+          This project was made in a group of two as a final project for an
+          itroductory level programming course. It uses HTML5, CSS3, and JavaScript
+          to animate a simple game where enemies chase the cursor. My role in the
+          group involved designing game elements, creating functions for backend
+          development, and game balancing.
+        </p>
+      </li>
+      <li id="codeU">
+        <a href="https://codeu-214602.appspot.com/" class="project" id="item">CodeU ChatApp</a>
+        <p class="description" >
+          This Web App was made in a group of three as the final project for Google's
+          CodeU summer program. This application implements Google's
+          AppEngine, DataStore, and BlobStore. It is built using HTML5, CSS3, JavaScript and
+          Java. My role in the group was to take care of front end programming to
+          generate a Responsive UI. I also did backend programming for input filtering.
+        </p>
+      </li>
+      <li id="kyoudai">
+        <a href="http://kyoudai-1985.appspot.com/" class="project" id="item">Kyoudai</a>
+        <p class="description" >
+          This is a website I have created for Kyoudai, Loyola Marymount's Japanese Culture club.
+          It has not been completed, but it implements Google's AppEngine, DataStore,
+          and BlobStore. It is built using HTML5, CSS3, JavaScript, Jinja2 and Python.
+        </p>
+      </li>
+      <li><a class="project">To be continued...</a></li>
+    </ul>
+
+
+    {% include "foot.html" %}
     </body>
-    
+
 </html>

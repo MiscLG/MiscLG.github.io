@@ -3,27 +3,62 @@
     <head>
     <meta charset="utf-8">
     <title> Contact Me </title>
-    <link rel="stylesheet" href="stylesheets/general/main.css">
-    <link rel="stylesheet" href="stylesheets/pageSpecific/contact.css">
     <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script></script>
-    
+    <script src="javascript/main.js"></script>
+    <link rel="stylesheet" href="stylesheets/modern/main.css">
+    <link rel="stylesheet" href="stylesheets/modern/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
     <body>
     {% include "nav.html" %}
     <h1>CONTACT ME @</h1>
-    <ul>
-        <li><a href="https://twitter.com/Misc___FC">twitter</a></li>
-        <li><a href="https://github.com/MiscLG">github</a></li>
-        <li><a href="https://www.facebook.com/garcia.luis.718">Facebook</a></li>
-        <li><a href="https://www.instagram.com/garcia_lfc/?hl=en">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/luis-garcia-068927104/">LinkedIn</a></li>
+    <ul id="serviceList" class="section">
+        <li><a class="service" href="https://twitter.com/Misc___FC">Twitter</a></li>
+        <li><a class="service" href="https://github.com/MiscLG">GitHub</a></li>
+        <li><a class="service" href="https://www.facebook.com/garcia.luis.718">Facebook</a></li>
+        <li><a class="service" href="https://www.instagram.com/garcia_lfc/?hl=en">Instagram</a></li>
+        <li><a class="service" href="https://www.linkedin.com/in/luis-garcia-068927104/">LinkedIn</a></li>
     </ul>
-    <footer> &copy; 2017
-        <div id="blueRect"> </div>
-        <div id="redRect"> </div>
-    </footer>        
+    <h2>Not Me, But I Recommend ...</h2>
+    <ul id="recommendations" class="section">
+      <li>
+        <a class="rec" id="tofugu" href="https://www.tofugu.com">Tofugu/WaniKani</a>
+      </li>
+      <p class="hiddenDiv" id="tofugu">
+        I am currently leaning Japanese. Tofugu is a cool
+        website that posts all kinds of cool articles about Japanese language
+        and culture.
+      </p>
+
+      <li>
+        <a class="rec" id="tiago" href="https://www.youtube.com/channel/UCXNyvv1dtqgsYjMV9R6e0Lw">Tiago Inline Skater</a>
+      </li>
+      <p class="hiddenDiv" id="tiago">
+        I enjoy inline skating on my free time. Tiago, the inline skater, is a
+        French inline skater whose videos are very instructional and entertaining.
+        I highly recommend.
+      </p>
+      <li>
+        <a class="rec" id="obrador" href="https://www.youtube.com/channel/UCxEgOKuI-n-WOJaNcisHvSg">Obrador MX</a>
+      </li>
+      <p class="hiddenDiv" id="obrador">
+        Did you know that the current president of Mexico gives a summary of
+        government affairs each morning through YouTube? Check out his latest
+        video.(*The videos are in Spanish*)
+      </p>
+      <li>
+        <a class="rec" id="humaneSociety" href="http://www.hssv.org/">Humane Society</a>
+      </li>
+      <p class="hiddenDiv" id="humaneSociety">
+        Last year I adopted a pair of kittens from the Humane Society of Silicon Valley.
+        These two cats, Azteca & Maya, are now an important part of my family. Look at the
+        humane society's website to change the life of a shelter pet and your own.
+      </p>
+    </ul>
+    {% include "foot.html" %}
     </body>
-    
+
 </html>
