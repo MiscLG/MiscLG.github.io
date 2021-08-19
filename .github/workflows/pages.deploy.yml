@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: yarn ci
+        run: yarn install --frozen-lockfile
       - name: Build project
         run: yarn next build
       - name: Export static files
