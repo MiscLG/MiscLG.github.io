@@ -1,8 +1,8 @@
-import {NextPage} from 'next'
+import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/navigation.module.css'
 
-const NavBar:NextPage = () =>{
+const NavBar = () =>{
   return <div className={styles.nav}>
     <Link href="/">
       <a>Home</a>

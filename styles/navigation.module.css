@@ -1,7 +1,6 @@
 .nav {
   min-width: 50vw;
-  background-color: #888;
-  border-bottom: 5px solid #4162c0 /*STRONGBLUE*/;
+  border-bottom: 5px solid #2549aa;
   display: flex;
   flex-flow: row nowrap;
   width: 100vw;
@@ -9,4 +8,8 @@
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
+}
+
+.nav a:hover {
+  color: #e0610c;
 }
