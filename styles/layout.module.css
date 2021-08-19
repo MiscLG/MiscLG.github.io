@@ -1,0 +1,28 @@
+.buttons {
+  display: flex;
+  min-width: 20vw;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-around;
+}
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  min-height: 5vh;
+  margin-bottom: 1vh;
+  background-color: white;
+}
+.main {
+  min-height: 80vh;
+  background-color: #888;
+}
+.footer {
+  background-color: burlywood;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: beige;
+  max-width: 100vw;
+  min-height: 100vh;
+}

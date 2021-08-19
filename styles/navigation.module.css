@@ -1,0 +1,12 @@
+.nav {
+  min-width: 50vw;
+  background-color: #888;
+  border-bottom: 5px solid #4162c0 /*STRONGBLUE*/;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  /* margin: 0 auto 2em auto; */
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
