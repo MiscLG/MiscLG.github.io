@@ -1,0 +1,41 @@
+{
+  "Education": [
+    {
+      "school":"Loyola Marymount University",
+      "degree":"Bachelor of Science",
+      "fields": {
+        "majors":["Computer Science"],
+        "minors":["Animation"]
+      },
+      "additional":{
+        "GPA": "3.92",
+        "startDate":"September 2017",
+        "endDate":"May 2021",
+        "honors":[
+          {"name":"Summa Cum Laude", "description":"Highest academic honors upon graduation."},
+          {"name":"Dean's List", "description":"Academic honors granted per semester."},
+        ],
+        "coCurriculars":[
+          {"name":"Kyoudai", "description":"Japanese Culture Club", "role":"eboard"},
+          {"name":"Alpha Sigma Nu", "description":"Jesuit Honor Society", "role": "member"},
+          {"name":"ACM LMU Chapter", "description":"Association for Computing Machinery", "role": "member"}
+        ]
+      }
+    },
+    {
+      "school":"Loyola Marymount University",
+      "degree":"Master of Science",
+      "fields": {
+        "majors":["Computer Science"],
+        "minors":["Animation"]
+      },
+      "additional":{
+        "GPA": "4.0",
+        "startDate":"June 2021",
+        "endDate":"May 2023",
+        "honors":[],
+        "coCurriculars":[]
+      }
+    }
+  ]
+}
