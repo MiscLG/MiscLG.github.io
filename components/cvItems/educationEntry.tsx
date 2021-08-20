@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EducationEntry = ({school,degree,details}) =>{
+const EducationEntry = ({school,degree,details}:any) =>{
 
   return <>
     <h3>{school}</h3>
