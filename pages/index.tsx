@@ -5,21 +5,24 @@ import styles from '../styles/Home.module.css'
 import Layout from '../components/layout'
 import myPicture from '../public/Me.jpg'
 import myPic from '../public/MeButBetter.jpg'
+import { getFileUrl } from '../utils/google_storage'
 
-const Home: NextPage = ({age}:any) => {
+const Home: NextPage =  ({age,url}:any) => {
   return (
     <Layout>
       <Head>
         <title>Welcome!</title>
       </Head>
-        {/* <Image
-          src={myPic}
+        <Image
+          src={"hello"}
+          loader={()=>url}
           alt="Picture of author."
           layout={'intrinsic'}
           priority={true}
           width={200}
           height={220}
-        /> */}
+
+        />
         <h1>Hello world!</h1>
         <p>
           My name is Luis Fernando Garcia Cerecedo. I am a {age} year-old Computer Science student and aspiring Full-Stack developer.
@@ -30,10 +33,14 @@ const Home: NextPage = ({age}:any) => {
 }
 
 export async function getStaticProps() {
+  const filename = "AEnB2Uo9zV9dBgsxG9rbjZVWiWX-l5vr-0Hs8RUbdKU3vD-I1JcNlRcS__Xk2btMbeesK22JKAAlzeoRsBpJq_Qzmm1R0QMduAHk44pMpqsuh76AVC1y-Ak.yLLxje3JnStwSvb7"
+  const url = await getFileUrl(filename)
   const age = 22;
+  console.log(url)
   return {
     props:{
-      age
+      age,
+      url
     }
   }
 }

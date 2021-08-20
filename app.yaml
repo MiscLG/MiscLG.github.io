@@ -1,0 +1,7 @@
+env: flexible
+runtime: nodejs
+service: default
+handlers:
+  - url: /.*
+    secure: always
+    script: auto
