@@ -12,14 +12,14 @@ const Home: NextPage = ({age}:any) => {
       <Head>
         <title>Welcome!</title>
       </Head>
-        <Image
+        {/* <Image
           src={myPic}
           alt="Picture of author."
           layout={'intrinsic'}
           priority={true}
           width={200}
           height={220}
-        />
+        /> */}
         <h1>Hello world!</h1>
         <p>
           My name is Luis Fernando Garcia Cerecedo. I am a {age} year-old Computer Science student and aspiring Full-Stack developer.
