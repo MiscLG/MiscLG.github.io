@@ -1,7 +1,9 @@
 import * as gc from '../config/'
 import * as util from 'util'
+import * as fs from 'fs'
 
-const bucket = gc.bucket('misc-9029.appspot.com')
+const BUCKET_NAME = 'misc-buk'//'misc-9029.appspot.com'
+const bucket = gc.bucket(BUCKET_NAME)
 
 async function createBucket(bucketName:string) {
   // Creates the new bucket
@@ -10,6 +12,9 @@ async function createBucket(bucketName:string) {
 }
 
 export async function uploadImage(file:any) {
+  if(!file){
+    throw "file not provided"
+  }
   return  new Promise((resolve, reject) => {
     const { originalname, buffer } = file
   
@@ -44,5 +49,10 @@ export async function getFile(filename:string) {
 
 export async function getFileUrl(filename:string) {
   const file = bucket.file(filename)
-  return file.publicUrl()
+  return file.getSignedUrl({
+    version:'v2',
+    action:'read',
+    expires:Date.now() + 1000*60*60 //one hour
+  })
+  // return file.publicUrl()
 }

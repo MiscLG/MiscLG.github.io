@@ -33,7 +33,7 @@ const Home: NextPage =  ({age,url}:any) => {
 }
 
 export async function getStaticProps() {
-  const filename = "AEnB2Uo9zV9dBgsxG9rbjZVWiWX-l5vr-0Hs8RUbdKU3vD-I1JcNlRcS__Xk2btMbeesK22JKAAlzeoRsBpJq_Qzmm1R0QMduAHk44pMpqsuh76AVC1y-Ak.yLLxje3JnStwSvb7"
+  const filename = "BestPictureOfMyself.jpg" //"AEnB2Uo9zV9dBgsxG9rbjZVWiWX-l5vr-0Hs8RUbdKU3vD-I1JcNlRcS__Xk2btMbeesK22JKAAlzeoRsBpJq_Qzmm1R0QMduAHk44pMpqsuh76AVC1y-Ak.yLLxje3JnStwSvb7"
   const url = await getFileUrl(filename)
   const age = 22;
   console.log(url)
