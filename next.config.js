@@ -5,5 +5,5 @@ module.exports = {
     loader:'custom',
     path: 'https:/storage.googleapis.com/',
     domains:['storage.googleapis.com'],
-  }
+  },
 }

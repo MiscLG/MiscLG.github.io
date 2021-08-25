@@ -1,8 +1,7 @@
 import * as gc from '../config/'
 import * as util from 'util'
-import * as fs from 'fs'
 
-const BUCKET_NAME = 'misc-buk'//'misc-9029.appspot.com'
+const BUCKET_NAME = 'misc-buk'
 const bucket = gc.bucket(BUCKET_NAME)
 
 async function createBucket(bucketName:string) {
