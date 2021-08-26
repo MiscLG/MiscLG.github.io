@@ -28,13 +28,17 @@
   margin-top: 2vh;
   padding: 2vmin;
 }
-.container {
+.container,
+.sectionBlock {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
   padding: 0 2vmin;
-  max-width: 100vw;
-  min-height: 100vh;
   color: #2549aa;
   background-color: #88ade5;
+  align-items: center;
+}
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  justify-content: space-between;
 }

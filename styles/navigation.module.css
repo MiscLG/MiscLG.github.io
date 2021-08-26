@@ -1,6 +1,7 @@
 .nav {
   min-width: 50vw;
   border-bottom: 5px solid #2549aa;
+  font-weight: 400;
   display: flex;
   flex-flow: row nowrap;
   width: 100vw;
@@ -12,4 +13,5 @@
 
 .nav a:hover {
   color: #e0610c;
+  /* text-shadow: 1px 3px 1px #333; */
 }

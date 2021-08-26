@@ -24,7 +24,7 @@ const Home: NextPage =  ({age}:any) => {
 
         />
         <h1>Hello world!</h1>
-        <p>
+        <p className={styles.description}>
           My name is Luis Fernando Garcia Cerecedo. I am a {age} year-old Computer Science student and aspiring Full-Stack developer.
           Please look around this website to find out more about myself and my projects, and don&apos;t forget to contact me if something piques your interest. 
         </p>

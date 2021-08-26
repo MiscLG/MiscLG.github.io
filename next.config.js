@@ -6,4 +6,7 @@ module.exports = {
     path: 'https:/storage.googleapis.com/',
     domains:['storage.googleapis.com'],
   },
+  env:{
+    mapsKey:'AIzaSyBJw20zh-n_rJxtQylSOYgLp935J7lJ8AM',
+  }
 }

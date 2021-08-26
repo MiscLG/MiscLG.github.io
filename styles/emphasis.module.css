@@ -1,0 +1,7 @@
+.highlighted {
+  color: #e0610c;
+  font-weight: 600;
+}
+.highlighted:hover {
+  color: #2549aa;
+}
