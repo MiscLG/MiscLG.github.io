@@ -8,14 +8,12 @@ const mapStyle = {
   position:"static",
   margin:'2vmin auto',
   width: '80vmin',
-  height: '50vmin',
+  height: '60vh',
   ['alignItems']:"center",
 }
 
 const containerStyle = {
   position:"static",
-  width:"80%",
-  height:"80%",
   // margin:"auto",
   ['alignItems']:"center",
   ['maxWidth']:"90vw",
@@ -43,7 +41,7 @@ const MapContainer = ({google})=>  {
   return (
     <Map
       google={google}
-      // zoom={5}
+      zoom={5}
       // className = {styles.map}
       containerStyle={containerStyle}
       style={mapStyle}
