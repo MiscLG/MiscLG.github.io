@@ -9,7 +9,7 @@ const mapStyle = {
   margin:'2vmin auto',
   width: '80vmin',
   height: '50vmin',
-  ['align-items']:"center",
+  ['alignItems']:"center",
 }
 
 const containerStyle = {
@@ -17,9 +17,9 @@ const containerStyle = {
   width:"80%",
   height:"80%",
   // margin:"auto",
-  ['align-items']:"center",
-  ['max-width']:"90vw",
-  ['max-height']:'90vh',
+  ['alignItems']:"center",
+  ['maxWidth']:"90vw",
+  ['maxHeight']:'90vh',
 }
 
 const MapContainer = ({google})=>  {

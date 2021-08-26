@@ -1,13 +1,13 @@
-const Cloud = require('@google-cloud/storage')
-const path = require('path')
-const serviceKey = path.join(process.cwd(), 'config/key_file.json')
+// const Cloud = require('@google-cloud/storage')
+// // const path = require('path')
+// const serviceKey = [process.cwd(),'config/key_file.json'].join()
 
-console.log(serviceKey)
+// console.log(serviceKey)
 
-const { Storage } = Cloud
-const storage = new Storage({
-  keyFilename: serviceKey,
-  projectId: 'misclg-9029',
-})
+// const { Storage } = Cloud
+// const storage = new Storage({
+//   keyFilename: serviceKey,
+//   projectId: 'misclg-9029',
+// })
 
-module.exports = storage
+// module.exports = storage

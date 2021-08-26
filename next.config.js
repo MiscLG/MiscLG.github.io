@@ -8,5 +8,11 @@ module.exports = {
   },
   env:{
     mapsKey:'AIzaSyBJw20zh-n_rJxtQylSOYgLp935J7lJ8AM',
-  }
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
+    return config;
+  },
 }
