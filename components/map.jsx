@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { Map, GoogleApiWrapper,Marker,InfoWindow } from 'google-maps-react';
 import styles from '../styles/map.module.css'
 
-const MAP_API_KEY:string = process.env.mapsKey || 'no-key'
+const MAP_API_KEY = process.env.mapsKey || 'no-key'
 const mapStyle = {
   display:"block",
   position:"static",
@@ -22,19 +22,19 @@ const containerStyle = {
   ['max-height']:'90vh',
 }
 
-const MapContainer = ({google}:any)=>  {
+const MapContainer = ({google})=>  {
   const [showingInfoWindow,setShowingInfoWindow] = useState(false)
-  const [activeMarker,setActiveMarker] = useState<any>({})
-  const [selectedPlace, setSelectedPlace] = useState<any>({})
+  const [activeMarker,setActiveMarker] = useState({})
+  const [selectedPlace, setSelectedPlace] = useState({})
 
-  const onMarkerClick = (props:any,marker:any,e:any) =>{
+  const onMarkerClick = (props,marker,e) =>{
     console.log(props,marker,e)
     setSelectedPlace(props)
     setActiveMarker(marker)
     setShowingInfoWindow(true)
   };
 
-  const onClose = (props:any)=> {
+  const onClose = (props)=> {
     if (showingInfoWindow) {
       setShowingInfoWindow(false)
       setActiveMarker(null)
@@ -43,7 +43,7 @@ const MapContainer = ({google}:any)=>  {
   return (
     <Map
       google={google}
-      zoom={5}
+      // zoom={5}
       // className = {styles.map}
       containerStyle={containerStyle}
       style={mapStyle}
