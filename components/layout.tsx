@@ -12,7 +12,7 @@ const Layout:NextPage = ({children}:any) =>{
     <header className={styles.header}>
       <NavBar/>
       <div className={styles.buttons}>
-        <a>Admin Login</a>
+        <a>Admin</a>
       </div>
     </header>
     <main className={styles.main}>

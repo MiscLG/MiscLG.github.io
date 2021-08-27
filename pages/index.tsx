@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import textStyles from '../styles/emphasis.module.css'
 import Layout from '../components/layout'
 import myPicture from '../public/Me.jpg'
 import myPic from '../public/MeButBetter.jpg'
@@ -25,7 +26,7 @@ const Home: NextPage =  ({age}:any) => {
         />
         <h1>Hello world!</h1>
         <p className={styles.description}>
-          My name is Luis Fernando Garcia Cerecedo. I am a {age} year-old Computer Science student and aspiring Full-Stack developer.
+          I'm <span className={textStyles.highlighted}>Luis Fernando Garcia Cerecedo</span>, a {age} year-old <span className={textStyles.highlighted}>Computer Science &amp; Animation</span> student and aspiring <span className={textStyles.highlighted}>full-stack software developer</span>.
           Please look around this website to find out more about myself and my projects, and don&apos;t forget to contact me if something piques your interest. 
         </p>
     </Layout>
