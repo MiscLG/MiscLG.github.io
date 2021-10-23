@@ -1,8 +1,9 @@
 .highlighted {
   color: #f2933a;
-  text-shadow: 0 0 0.14em #571a0b;
+  text-shadow: 0.03em 0.03em 0.13em #571a0b;
   /* #16181a; */
   font-weight: 600;
+  font-size: 105%;
 }
 .highlighted:hover {
   color: #2549aa;

@@ -14,6 +14,5 @@
 
 .nav a:hover {
   color: #f2933a;
-  text-shadow: 0 0 0.15em #571a0b;
-  /* text-shadow: 1px 3px 1px #333; */
+  text-shadow: 0.02em 0.02em 0.13em #571a0b;
 }

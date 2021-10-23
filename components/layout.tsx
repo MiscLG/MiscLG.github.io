@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/layout.module.css'
+import textStyles from '../styles/emphasis.module.css'
 import NavBar from './NavBar'
 const Layout:NextPage = ({children}:any) =>{
 
@@ -19,7 +20,7 @@ const Layout:NextPage = ({children}:any) =>{
       {children}
     </main>
     <footer className={styles.footer}>
-      &copy; 2021 MiscLG
+      <span className={textStyles.highlighted}>&copy; 2021 MiscLG</span>
     </footer>
   
   </div>

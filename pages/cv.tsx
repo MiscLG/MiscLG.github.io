@@ -1,7 +1,6 @@
-import Layout from '../components/layout'
 import EducationEntry  from '../components/cvItems/educationEntry'
 export default function CVPage() {
-  return <Layout>
+  return <>
     <h2>Education</h2>
       <EducationEntry
       school={"Loyola Marymount University"}
@@ -15,5 +14,5 @@ export default function CVPage() {
     <h2>Experience</h2>
     <h2>Projects</h2>
     
-  </Layout>
+  </>
 }
