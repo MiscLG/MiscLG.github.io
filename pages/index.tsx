@@ -13,16 +13,7 @@ export default function Home({ age }:InferGetStaticPropsType<GetStaticProps>) {
       <Head>
         <title>Welcome!</title>
       </Head>
-        <Image
-          src={myPic}
-          unoptimized
-          alt="Picture of author."
-          layout={'intrinsic'}
-          priority={true}
-          width={200}
-          height={200}
-
-        />
+        <img src={myPicture} alt="Pictured of Luis Garcia" width={200}/>
         <h1>Hello world!</h1>
         <p className={styles.description}>
           I&apos;m <span className={textStyles.highlighted}>Luis Fernando Garcia Cerecedo</span>, a {age} year-old <span className={textStyles.highlighted}>Computer Science &amp; Animation</span> student and aspiring <span className={textStyles.highlighted}>full-stack software developer</span>.

@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const optimizedImages = require('next-optimized-images')
+const withPlugins = require('next-compose-plugins')
+
+const nextConfig = {
   reactStrictMode: true,
+  // images:{
+  //   loader:'custom',
+  //   path: 'https:/storage.googleapis.com/',
+  //   domains:['storage.googleapis.com'],
+  // },
   images:{
-    loader:'custom',
-    path: 'https:/storage.googleapis.com/',
-    domains:['storage.googleapis.com'],
+    disableStaticImages:true,
   },
   env:{
     mapsKey:'AIzaSyBJw20zh-n_rJxtQylSOYgLp935J7lJ8AM',
@@ -16,3 +22,15 @@ module.exports = {
     return config;
   },
 }
+
+const config = withPlugins([
+  [
+    optimizedImages,
+    {
+      optimizeImages:false,
+    }
+  ]
+],
+nextConfig
+)
+module.exports = config
