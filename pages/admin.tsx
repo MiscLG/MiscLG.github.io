@@ -4,9 +4,10 @@ import React, {useState} from 'react'
 export default function AdminPage() {
   // const [image,setImage] = useState<any>(null)
   // const handleSubmit = ()=>uploadImage(image);
-  return 
+  return (
     <form onSubmit={()=>console.log("submitted")}>
       <label>Add file</label>
       <input type={'file'} />
     </form>
+  )
 }
