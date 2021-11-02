@@ -1,5 +1,5 @@
 {
-  "Education": [
+  "education": [
     {
       "school":"Loyola Marymount University",
       "degree":"Bachelor of Science",
@@ -7,13 +7,13 @@
         "majors":["Computer Science"],
         "minors":["Animation"]
       },
+      "startDate":{"month":9,"year":2017},
+      "endDate":{"month":5,"year":2021},
       "additional":{
-        "GPA": "3.92",
-        "startDate":"September 2017",
-        "endDate":"May 2021",
+        "gpa": "3.92",
         "honors":[
           {"name":"Summa Cum Laude", "description":"Highest academic honors upon graduation."},
-          {"name":"Dean's List", "description":"Academic honors granted per semester."},
+          {"name":"Dean's List", "description":"Academic honors granted per semester."}
         ],
         "coCurriculars":[
           {"name":"Kyoudai", "description":"Japanese Culture Club", "role":"eboard"},
@@ -26,16 +26,59 @@
       "school":"Loyola Marymount University",
       "degree":"Master of Science",
       "fields": {
-        "majors":["Computer Science"],
-        "minors":["Animation"]
+        "majors":["Computer Science"]
       },
+      "startDate":{"month":4,"year":2021},
+      "endDate":{"month":5,"year":2023},
       "additional":{
-        "GPA": "4.0",
-        "startDate":"June 2021",
-        "endDate":"May 2023",
+        "gpa": "4.0",
         "honors":[],
         "coCurriculars":[]
       }
     }
+  ],
+  "experience":[
+    {
+      "organization":"Google CSSI LMU Extension",
+      "position":"Teaching Assistant",
+      "startDate": {"month":7,"year":2019},
+      "endDate":{"month":8,"year":2019},
+      "summaryPoints": [
+        "Tutored full-stack web development principles in Python, JavaScript, HTML, and CSS reviewing code for 17 different students and building sample web applications.",
+        "Collected feedback and coordinated actionable improvement goals between 17 students and 6 administrative staff to plan meals, recreational events, and housing accommodations reinforcing communication and enhancing productivity."  
+    ]
+    },
+    {
+      "organization":"Southland Roofing Inc.",
+      "position":"Intern",
+      "startDate": {"month":7,"year":2020},
+      "endDate":{"month":8,"year":2020},
+      "summaryPoints": [
+        "Audited webpages in Southland Roofing Inc’s domain for actionable improvements in loading speed, mobile integration, and accessibility; identified and corrected issues across 5 business-critical pages increasing website speed by 50% and organic Google Search traffic by 10%.",
+        "Developed accessible, business-oriented user interfaces, assessing design standards and business priorities with marketers and designers improving traffic to relevant webpages by 30%."  
+    ]
+    },
+    {
+      "organization":"Mozilla Builders",
+      "position":"Hacktern",
+      "startDate": {"month":3,"year":2020},
+      "endDate":{"month":5,"year":2020},
+      "summaryPoints": [
+        "Designed, proposed, and developed a full-stack web application in a team of two, maintaining industry standards for mobile-first development, version control, and quality via code reviews with professional software engineers.",
+        "Leveraged and contributed to open-source software to asynchronously integrate computer vision, resource scraping, and a React UI."  
+    ]
+    },
+    {
+      "organization":"Google CodeU",
+      "position":"Participant",
+      "startDate": {"month":5,"year":2018},
+      "endDate":{"month":8,"year":2018},
+      "summaryPoints": [
+        "Collaborated remotely in a team of 3 using Java, JavaScript, HTML, CSS and Google Cloud Platform APIs to build a messaging web application over the course of 12 weeks.",
+        "Learned and followed industry best practices such as conducting regular code reviews, extending an existing codebase, designing new components and interfaces, and leading them to completion."  
+    ]
+    }
   ]
+
+
 }
