@@ -1,18 +1,23 @@
-import EducationEntry  from '../components/cvItems/educationEntry'
-export default function CVPage() {
+import type {GetStaticProps,InferGetStaticPropsType} from 'next'
+import cvObj from '../public/cvInfo.json'
+import EducationEntry,{EduEntry} from '../components/cvItems/EducationEntry'
+import ExperienceEntry,{ExpEntry} from '../components/cvItems/ExperienceEntry'
+export default function CVPage({ cvObj }:InferGetStaticPropsType<GetStaticProps>) {
+  
   return <>
-    <h2>Education</h2>
-      <EducationEntry
-      school={"Loyola Marymount University"}
-      degree={'Bachelor of Science'}
-      details={
-        (<>Major: Computer Science<br/>
-        Minor: Animation<br/>
-        September 2017- May 2021<br/></>)
-      }
-      />
-    <h2>Experience</h2>
-    <h2>Projects</h2>
-    
+    <h2 id={"edu"}>Education</h2>
+    {cvObj.education.map((entry:EduEntry,ix:number)=><EducationEntry key={ix} entry={entry} />)}
+    <hr/>
+    <h2 id={"exp"}>Experience</h2>
+    {cvObj.experience.map((entry:ExpEntry,ix:number)=><ExperienceEntry key={ix} entry={entry} />)}
+    <hr/>
   </>
+}
+
+export const getStaticProps:GetStaticProps = async (context) =>{
+  return {
+    props:{
+      cvObj,
+    }
+  }
 }
