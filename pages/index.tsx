@@ -12,10 +12,11 @@ export default function Home({ age }:InferGetStaticPropsType<GetStaticProps>) {
       <Head>
         <title>Welcome!</title>
       </Head>
-        <img src={myPicture} alt="Picture of Luis Garcia" width={200}/>
+        <img src={myPic} alt="Picture of Luis Garcia" width={200}/>
         <h1>Hello world!</h1>
         <p className={styles.description}>
-          I&apos;m <span className={"highlighted"}>Luis Fernando Garcia Cerecedo</span>, a {age} year-old <span className={"highlighted"}>Computer Science &amp; Animation</span> student and aspiring <span className={"highlighted"}>full-stack software developer</span>.
+          I&apos;m <span className={"highlighted"}>Luis Fernando Garcia Cerecedo</span>, a {age} year-old <span className={"highlighted"}>Computer Science &amp; Animation</span> student and <span className={"highlighted"}>Software Engineer</span>.
+          My expertise lies in web app development, and I mainly work with some mix of Python and TypeScript.
           Please look around this website to find out more about myself and what I&apos;m up to. Also don&apos;t forget to contact me if something piques your interest. 
         </p>
     </>
