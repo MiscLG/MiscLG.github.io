@@ -10,7 +10,7 @@ export interface ExpEntry{
 export default function ExperienceEntry({entry}:{entry:ExpEntry}) {
   let options = {month:"long", year:"numeric"} as const
   const startDate = new Date(entry.startDate.year,entry.startDate.month-1).toLocaleDateString("en-US",options)
-  const endDate = entry.endDate ? new Date(entry.endDate.year,entry.endDate.month-1).toLocaleDateString("en-US",options): null
+  const endDate = entry.endDate ? new Date(entry.endDate.year,entry.endDate.month-1).toLocaleDateString("en-US",options): "Present"
   return <Entry
     subTopic={entry.position}
     topic={" @" + entry.organization}

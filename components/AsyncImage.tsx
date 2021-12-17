@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from "react";
 import { getStorage,getDownloadURL,ref,list, StorageReference } from 'firebase/storage'
+import styles from "../styles/media.module.css"
 
 export default function AsyncImage({fireRef}:{fireRef:StorageReference}){
   const [url,setUrl] = useState<string>()
@@ -14,7 +15,7 @@ export default function AsyncImage({fireRef}:{fireRef:StorageReference}){
     fetchUrl()
   })
 
-  if (url) return <img src={url} width={200}/>
+  if (url) return <img className={styles.asyncimg} src={url}/>
 
   return <p>Loading...</p>
   

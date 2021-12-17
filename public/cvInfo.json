@@ -39,33 +39,43 @@
   ],
   "experience":[
     {
+      "organization":"Aberythmic LLC",
+      "position":"Software Engineer",
+      "startDate": {"month":8,"year":2021},
+      "summaryPoints": [
+        "Implemented a GraphQL API extending a Django codebase to securely expose and aggregate data from a MySQL database and monitor information about asynchronous Celery tasks and events.",
+        "Developed a front-end React.js webapp that interfaces with various webservices to display asset information, and images, filtering and sorting them to optimize the quality assurance process."  
+    ]
+    },
+    {
       "organization":"Google CSSI LMU Extension",
       "position":"Teaching Assistant",
       "startDate": {"month":7,"year":2019},
       "endDate":{"month":8,"year":2019},
       "summaryPoints": [
-        "Tutored full-stack web development principles in Python, JavaScript, HTML, and CSS reviewing code for 17 different students and building sample web applications.",
-        "Collected feedback and coordinated actionable improvement goals between 17 students and 6 administrative staff to plan meals, recreational events, and housing accommodations reinforcing communication and enhancing productivity."  
+        "Taught full-stack web development principles in Python, JavaScript, HTML5, and CSS3 to 17 college freshmen, creating sample web applications using Google App Engine and reviewing the students’ code.",
+        "Interpreted student feedback and mediated with 6 administrative staff members to plan meals, recreational events, and housing accommodations, enhancing organization and productivity."  
     ]
     },
     {
       "organization":"Southland Roofing Inc.",
-      "position":"Intern",
+      "position":"Web Developer Intern",
       "startDate": {"month":7,"year":2020},
       "endDate":{"month":8,"year":2020},
       "summaryPoints": [
-        "Audited webpages in Southland Roofing Inc’s domain for actionable improvements in loading speed, mobile integration, and accessibility; identified and corrected issues across 5 business-critical pages increasing website speed by 50% and organic Google Search traffic by 10%.",
-        "Developed accessible, business-oriented user interfaces, assessing design standards and business priorities with marketers and designers improving traffic to relevant webpages by 30%."  
+        "Drafted a roadmap to improve loading speed, mobile integration, and accessibility across 5 business-critical webpages, increasing loading speed by 50% and organic Google Search traffic by 10%.",
+        "Instituted design standards and business priorities with marketers and designers to build accessible, business-oriented user interfaces that direct traffic to relevant webpages refining user click-through rates by 30%."  
     ]
     },
     {
       "organization":"Mozilla Builders",
-      "position":"Hacktern",
+      "position":"Software Engineer Hacktern",
       "startDate": {"month":3,"year":2020},
       "endDate":{"month":5,"year":2020},
       "summaryPoints": [
-        "Designed, proposed, and developed a full-stack web application in a team of two, maintaining industry standards for mobile-first development, version control, and quality via code reviews with professional software engineers.",
-        "Leveraged and contributed to open-source software to asynchronously integrate computer vision, resource scraping, and a React UI."  
+        "Designed a web application in a team of 2 to identify unwanted posts of a user’s image on public Instagram profiles",
+        "Instituted the utilization of mobile-first development, version control with Git, and GitHub code reviews for the team workflow leading to a faster pace of development and more efficient debugging.",
+        "Leveraged open-source facial recognition libraries, web scraping with Selenium, and React.js to query a face across the public posts of an Instagram user, testing for performance and Machine Learning bias."  
     ]
     },
     {
@@ -74,8 +84,8 @@
       "startDate": {"month":5,"year":2018},
       "endDate":{"month":8,"year":2018},
       "summaryPoints": [
-        "Collaborated remotely in a team of 3 using Java, JavaScript, HTML, CSS and Google Cloud Platform APIs to build a messaging web application over the course of 12 weeks.",
-        "Learned and followed industry best practices such as conducting regular code reviews, extending an existing codebase, designing new components and interfaces, and leading them to completion."  
+        "Collaborated remotely in a team of 3 to build a web application using Java, JavaScript, HTML, and CSS over the course of 12 weeks, using various Google Cloud Platform APIs, including App Engine and Datastore.",
+        " Applied industry best practices such as contributing to open-source software using Git and GitHub, conducting regular code reviews with and for teammates, extending an existing codebase, designing new components, and leading them to completion."  
     ]
     }
   ]

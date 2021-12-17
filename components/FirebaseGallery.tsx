@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from "react";
 import { getStorage,getDownloadURL,ref,list, StorageReference } from 'firebase/storage'
 import AsyncImage from "./AsyncImage";
+import styles from "../styles/FirebaseGallery.module.css"
 
 export default function FireBaseGallery(){
   const [refs,setRefs] = useState<StorageReference[]>([]);
@@ -15,7 +16,7 @@ export default function FireBaseGallery(){
   },[])
 
   return(
-    <div>
+    <div className={styles.gallery}>
     {
       refs.map((ref:StorageReference,ix:number)=> <AsyncImage fireRef={ref} key={ix}/>)
     }

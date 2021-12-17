@@ -1,0 +1,16 @@
+.fancyButton{
+  padding: 0.5rem;
+  /* background-color: blue; */
+  color: #6fa4e0;
+  background-color:#2549aa;
+  border: 0.15rem solid #f2933a;
+  border-radius:0.5rem;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.fancyButton:hover{
+  transform:translateY(-0.1rem);
+  box-shadow: 0.05em 0.05em 0.13em #571a0b;
+  cursor: pointer;
+}
