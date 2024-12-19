@@ -24,7 +24,7 @@ jobs:
       - name: Install packages
         run: yarn install --frozen-lockfile
       - name: Build project
-        run: yarn next build
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn next build
       - name: Export static files
         run: yarn next export
       - name: Add .nojekyll file
