@@ -3,17 +3,18 @@ const optimizedImages = require('next-optimized-images')
 const withPlugins = require('next-compose-plugins')
 
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   // images:{
   //   loader:'custom',
   //   path: 'https:/storage.googleapis.com/',
   //   domains:['storage.googleapis.com'],
   // },
-  images:{
-    disableStaticImages:true,
+  images: {
+    disableStaticImages: true,
   },
-  env:{
-    mapsKey:'AIzaSyBJw20zh-n_rJxtQylSOYgLp935J7lJ8AM',
+  env: {
+    mapsKey: 'AIzaSyBJw20zh-n_rJxtQylSOYgLp935J7lJ8AM',
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -27,10 +28,10 @@ const config = withPlugins([
   [
     optimizedImages,
     {
-      optimizeImages:false,
+      optimizeImages: false,
     }
   ]
 ],
-nextConfig
+  nextConfig
 )
 module.exports = config
