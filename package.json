@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -p 8080",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start -p 8080",
     "lint": "next lint"
   },
   "dependencies": {
@@ -25,8 +25,10 @@
   },
   "devDependencies": {
     "@types/react": "17.0.19",
+    "cross-env": "^7.0.3",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "typescript": "4.3.5"
-  }
+  },
+  "packageManager": "yarn@4.5.3"
 }
