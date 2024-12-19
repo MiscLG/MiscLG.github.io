@@ -2,21 +2,21 @@ import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/navigation.module.css'
 
-const NavBar = () =>{
+const NavBar = () => {
   return <div className={styles.nav}>
-    <Link href="/">
+    <Link legacyBehavior href="/">
       <a>Home</a>
     </Link>
-    <Link href="/about">
+    <Link legacyBehavior href="/about">
       <a>About</a>
     </Link>
-    <Link href="/art">
+    <Link legacyBehavior href="/art">
       <a>Art</a>
     </Link>
-    <Link href="/code">
+    <Link legacyBehavior href="/code">
       <a>Code</a>
     </Link>
-    <Link href="/cv">
+    <Link legacyBehavior href="/cv">
       <a>CV</a>
     </Link>
   </div>
