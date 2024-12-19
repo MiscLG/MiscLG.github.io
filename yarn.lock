@@ -5190,8 +5190,8 @@ __metadata:
   linkType: hard
 
 "protobufjs@npm:^6.10.0":
-  version: 6.11.2
-  resolution: "protobufjs@npm:6.11.2"
+  version: 6.11.4
+  resolution: "protobufjs@npm:6.11.4"
   dependencies:
     "@protobufjs/aspromise": "npm:^1.1.2"
     "@protobufjs/base64": "npm:^1.1.2"
@@ -5209,7 +5209,7 @@ __metadata:
   bin:
     pbjs: bin/pbjs
     pbts: bin/pbts
-  checksum: 10c0/1b77d770a9d6a0e32a0d2f160814832e188599e3d4431492a4a806021305e6d06ee0d0eb5633334a3481d3dfda6673dbd5a856435042c81e404a48bdfbd69b02
+  checksum: 10c0/c244d7b9b6d3258193da5c0d1e558dfb47f208ae345e209f90ec45c9dca911b90fa17e937892a9a39a4136ab9886981aae9efdf6039f7baff4f7225f5eeb9812
   languageName: node
   linkType: hard
 
